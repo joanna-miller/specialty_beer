@@ -1,6 +1,12 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all.order('brand', 'name')
+    if params[:beer_search]
+      @products = Product.where('lower(name) LIKE ?', "%#{params[:beer_search].downcase}%")
+    elsif params[:brand_search]
+      @products = Product.where('lower(brand) LIKE ?', "%#{params[:brand_search].downcase}%")
+    else
+      @products = Product.all.order('brand', 'name')
+    end
     render :index
   end
 

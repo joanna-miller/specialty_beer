@@ -1,22 +1,30 @@
 <h1>Beer List</h1>
 <p><%= link_to "Add a New Beer", new_product_path %></p>
 
-<div class="form">
-  <%= form_tag products_path, method: :get do %>
-    <%= label_tag "Find Beer by Name" %>
-    <%= text_field_tag :beer_search, params[:beer_search] %>
-    <%= submit_tag 'Search', name: nil, class: "btn" %>
-  <% end %>
+<div id="search-forms">
+  <div class="beer-search">
+    <%= form_tag products_path, method: :get do %>
+      <%= label_tag "Find Beer by Name" %>
+      <%= text_field_tag :beer_search, params[:beer_search], class: "form-control" %>
+      <%= submit_tag 'Search by Beer', name: nil, class: "btn search-button" %>
+    <% end %>
+  </div>
+
+  <div class="brand-search">
+    <%= form_tag products_path, method: :get do %>
+      <%= label_tag "Find Beer by Brand" %>
+      <%= text_field_tag :brand_search, params[:brand_search], class: "form-control" %>
+      <%= submit_tag 'Search by Brand', brand: nil, class: "btn search-button" %>
+    <% end %>
+  </div>
+
 </div>
 
-<div class="form">
+<% if @products.length < Product.all.length %>
   <%= form_tag products_path, method: :get do %>
-    <%= label_tag "Find Beer by Brand" %>
-    <%= text_field_tag :brand_search, params[:brand_search] %>
-    <%= submit_tag 'Search', name: nil, class: "btn" %>
+    <%= submit_tag "See Full Beer List", name: :full_list, class: "btn" %>
   <% end %>
-</div>
-
+<% end %>
 
 <div id="beer-display">
   <% if @products.any? %>
