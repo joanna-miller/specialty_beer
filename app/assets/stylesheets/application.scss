@@ -1,2 +1,73 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  text-align: center;
+  background-color: #e4a800;
+}
+
+#welcome {
+  margin-top: 30px;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+#beer-display {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.beer {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 150px;
+  height: 150px;
+  overflow-wrap: normal;
+  border: 2px solid #333333;
+  margin: 5px;
+  border-radius: 10px;
+  background: rgb(182,97,1);
+  background: linear-gradient(0deg, rgba(182,97,1,1) 72%, rgba(238,238,238,1) 82%);
+}
+
+.brand {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333333;
+}
+
+a {
+  color: #eeeeee;
+  font-size: 18px;
+  &:hover {
+    font-size: 20px;
+    color: #eeeeee;
+  }
+}
+
+.review-header {
+  font-size: 20px;
+}
+
+.btn {
+  border-width: 2px;
+  border-color: #bc6f00;
+  color: #bc6f00;
+  margin: 20px;
+  &:hover {
+    border-color: #eeeeee;
+    background-color: #bc6f00;
+    color: #eeeeee;
+  }
+}
+
+.form-control {
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+
+
+

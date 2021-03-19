@@ -1,11 +1,33 @@
 <h1>Beer List</h1>
-
-<% if @products.any? %>
-  <% @products.each do |product| %>
-    <p><%= link_to "#{product.brand}: #{product.name}", product_path(product) %></p>
-  <% end %>
-<% else %>
-  <p>There are currently no beers in stock. Follow the link below to add some to the list!</p>
-<% end %>
-
 <p><%= link_to "Add a New Beer", new_product_path %></p>
+
+<div class="form">
+  <%= form_tag products_path, method: :get do %>
+    <%= label_tag "Find Beer by Name" %>
+    <%= text_field_tag :beer_search, params[:beer_search] %>
+    <%= submit_tag 'Search', name: nil, class: "btn" %>
+  <% end %>
+</div>
+
+<div class="form">
+  <%= form_tag products_path, method: :get do %>
+    <%= label_tag "Find Beer by Brand" %>
+    <%= text_field_tag :brand_search, params[:brand_search] %>
+    <%= submit_tag 'Search', name: nil, class: "btn" %>
+  <% end %>
+</div>
+
+
+<div id="beer-display">
+  <% if @products.any? %>
+    <% @products.each do |product| %>
+      <div class="beer">
+        <p class="brand"><%= "#{product.brand}" %></p><p><%= link_to "#{product.name}", product_path(product) %></p>
+      </div>
+    <% end %>
+  <% else %>
+    <p>There are currently no beers in stock. Follow the link below to add some to the list!</p>
+  <% end %>
+</div>
+
+

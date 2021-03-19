@@ -1,6 +1,6 @@
 <%= render "layouts/errors", :object => @review %>
 
-<h2>Write A Review</h2>
+<h2>Write A Review for <%= @product.name %></h2>
 <%= form_for [@product, @review] do |f| %>
   <%= f.label "Name" %>
   <%= f.text_field :author, class: "form-control" %>

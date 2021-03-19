@@ -6,9 +6,9 @@
 <h4>Reviews:</h4>
 <% if @product.reviews.any? %>
   <% @product.reviews.each do |review| %>
-    <ol>
-      <li>Written by: <%= review.author %>   Rating: <%= '*'*review.rating %><br><%= review.content_body %></li>
-    </ol>
+    <p>
+      <li><span class="review-header">Written by: <b><%= review.author %></b>, Rating: <%= '*'*review.rating %></span><br><%= review.content_body %></li>
+    </p>
   <% end %>
 <% else %>
   <p>No reviews have been written for this product yet. Click link below to add one!</p>
