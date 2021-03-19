@@ -1,6 +1,7 @@
 <h1>Beer List</h1>
 <p><%= link_to "Add a New Beer", new_product_path %></p>
 
+
 <div id="search-forms">
   <div class="beer-search">
     <%= form_tag products_path, method: :get do %>
@@ -39,3 +40,4 @@
 </div>
 
 
+<p><%= link_to "Back to Home Page", root_path %></p>

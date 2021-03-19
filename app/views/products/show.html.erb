@@ -1,9 +1,11 @@
+<p><%= link_to "Leave a Review", new_product_review_path(@product) %></p>
+
 <h1><%= @product.name %></h1>
-<h3>Made by: <%= @product.brand %></h3>
+<h2>Made by: <%= @product.brand %></h2>
 <h3>Price: $<%= @product.cost %></h3>
 <h4>Made In: <%= @product.country_of_origin %></h4>
 
-<h4>Reviews:</h4>
+<h3>Reviews for <%= @product.name %></h3>
 <% if @product.reviews.any? %>
   <% @product.reviews.each do |review| %>
     <p>
@@ -14,9 +16,11 @@
   <p>No reviews have been written for this product yet. Click link below to add one!</p>
 <% end %>
 
-<p><%= link_to "Leave a Review", new_product_review_path(@product) %></p>
+
 
 <p><%= link_to "Edit Beer", edit_product_path(@product) %></p>
 
 <p><%= link_to "Back to Full Beer List", products_path %></p>
+
+<p><%= link_to "Back to Home Page", root_path %></p>
 
