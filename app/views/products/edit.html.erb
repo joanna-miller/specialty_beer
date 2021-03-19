@@ -1,3 +1,9 @@
 <h1>Edit Product</h1>
 
 <%= render "layouts/product_form" %>
+
+<%= link_to "Delete Beer", product_path(@product), :data => { :confirm => "Are you sure?", :method => "delete" } %></p>
+
+<p><%= link_to "Back to Beer", product_path(@product) %></p>
+
+<p><%= link_to "Back to Full Beer List", products_path %></p>

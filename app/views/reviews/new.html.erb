@@ -1,0 +1,15 @@
+<%= render "layouts/errors", :object => @review %>
+
+<h2>Write A Review</h2>
+<%= form_for [@product, @review] do |f| %>
+  <%= f.label "Name" %>
+  <%= f.text_field :author, class: "form-control" %>
+  <%= f.label "Review" %>
+  <%= f.text_area :content_body, class: "form-control", :rows=>10, :cols=>60 %>
+  <%= f.label :rating %>
+  <%= f.number_field :rating, min: 0, max: 5, class: "form-control" %>
+  <%= f.submit class: "btn"  %>
+<% end %>
+
+<p><%= link_to "Back to Beer", product_path(@product) %></p>
+<p><%= link_to "Back to Full Beer List", products_path %></p>
