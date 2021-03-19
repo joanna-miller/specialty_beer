@@ -8,7 +8,9 @@ describe Product do
   it { should validate_presence_of :country_of_origin }
   it { should validate_presence_of :brand }
   it('titleizes the name of a product') do
-    beer = Product.create({name: "fake beer", brand: "Dogfish Head", cost: "10.99", country_of_origin: "USA"})
-    expect(beer.name()).to(eq('Fake Beer'))
+    beer = Product.create({name: "fake beer", brand: "dogfish head", cost: "10.99", country_of_origin: "united states"})
+    expect(beer.name).to(eq('Fake Beer'))
+    expect(beer.country_of_origin).to(eq('United States'))
+    expect(beer.brand).to(eq('Dogfish Head'))
   end
 end
