@@ -6,7 +6,7 @@
   <div class="beer-search">
     <%= form_tag products_path, method: :get do %>
       <%= label_tag "Find Beer by Name" %>
-      <%= text_field_tag :beer_search, params[:beer_search], class: "form-control" %>
+      <%= text_field_tag :beer_search, params[:beer_search], class: "form-control", required: true %>
       <%= submit_tag 'Search by Beer', name: nil, class: "btn search-button" %>
     <% end %>
   </div>
@@ -14,28 +14,40 @@
   <div class="brand-search">
     <%= form_tag products_path, method: :get do %>
       <%= label_tag "Find Beer by Brand" %>
-      <%= text_field_tag :brand_search, params[:brand_search], class: "form-control" %>
+      <%= text_field_tag :brand_search, params[:brand_search], class: "form-control", required: true %>
       <%= submit_tag 'Search by Brand', brand: nil, class: "btn search-button" %>
     <% end %>
   </div>
-
 </div>
 
-<% if @products.length < Product.all.length %>
+<% if @searched_product != nil %>
   <%= form_tag products_path, method: :get do %>
     <%= submit_tag "See Full Beer List", name: :full_list, class: "btn" %>
   <% end %>
-<% end %>
-
-<div id="beer-display">
-  <% if @products.any? %>
-    <% @products.each do |product| %>
+  <h3>Search Results</h3>
+  <% if @searched_product.any? %>  
+    <% @searched_product.each do |product| %>
       <div class="beer">
         <p class="brand"><%= "#{product.brand}" %></p><p><%= link_to "#{product.name}", product_path(product) %></p>
       </div>
     <% end %>
   <% else %>
-    <p>There are currently no beers in stock. Follow the link below to add some to the list!</p>
+    <p>There are currently no matches to your search.</p>
+  <% end %>    
+<% end %>
+
+
+<div id="beer-display">
+  <% if @products != nil %>
+    <% if @products.any? %>
+      <% @products.each do |product| %>
+        <div class="beer">
+          <p class="brand"><%= "#{product.brand}" %></p><p><%= link_to "#{product.name}", product_path(product) %></p>
+        </div>
+      <% end %>
+    <% else %>
+      <p>There are currently no beers on the list! Feel free to add one with the link above.</p>
+    <% end %>
   <% end %>
 </div>
 
