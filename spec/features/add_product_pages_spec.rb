@@ -5,12 +5,12 @@ describe "the add a product process" do
     visit '/'
     click_link 'Go to Full Beer List'
     click_link 'Add a New Beer'
-    fill_in 'Name', :with => '60 Minute IPA'
+    fill_in 'Name', :with => 'Namaste'
     fill_in 'Brand', :with => 'Dogfish Head'
     fill_in 'Cost', :with => '10.99'
     fill_in 'Country of origin', :with => 'USA'
     click_on 'Create Product'
-    expect(page).to have_content 'Dogfish Head: 60 Minute IPA'
+    expect(page).to have_content 'Dogfish Head: Namaste'
   end
 
   it "gives an error when any field is left blank" do
