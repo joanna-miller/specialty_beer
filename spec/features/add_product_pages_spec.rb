@@ -10,7 +10,7 @@ describe "the add a product process" do
     fill_in 'Cost', :with => '10.99'
     fill_in 'Country of origin', :with => 'USA'
     click_on 'Create Product'
-    expect(page).to have_content 'Dogfish Head: Fake Beer'
+    expect(page).to have_content 'Fake Beer'
   end
 
   it "gives an error when any field is left blank" do

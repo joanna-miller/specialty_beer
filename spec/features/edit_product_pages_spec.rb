@@ -8,6 +8,6 @@ describe "the edit a product process" do
     click_link 'Edit Beer'
     fill_in 'Name', :with => 'Another Fake Beer'
     click_on 'Update Product'
-    expect(page).to have_content 'Dogfish Head: Another Fake Beer'
+    expect(page).to have_content 'Another Fake Beer'
   end
 end
