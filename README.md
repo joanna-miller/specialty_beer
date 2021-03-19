@@ -1,14 +1,11 @@
-# _{README Template}_
+# _Better Beer Bureau_
 
 ### By _**Jo Miller**_
 
-#### _This project was created solely for the education of the author(s) and is not in a complete or portfolio-ready state. It should not be considered representative of professional work._
+[Epicodus](https://www.epicodus.com/) - [Ruby and Rails](https://www.learnhowtoprogram.com/ruby-and-rails/) - [Week 4](https://www.learnhowtoprogram.com/ruby-and-rails/rails-with-active-record/active-record-independent-project)
 
 
-[Epicodus](https://www.epicodus.com/) - [Ruby and Rails](https://www.learnhowtoprogram.com/ruby-and-rails/) <!-- - [Week 4](https://www.learnhowtoprogram.com/ruby-and-rails/ruby-database-basics/database-basics-independent-project) -->
-
-
-#### Date created: {03/00/2021}
+#### Date created: 03/19/2021
 ---
 
 ## Technologies Used
@@ -34,11 +31,11 @@
 
 ## Description
 
-{Description of application}
+Welcome to the Better Beer Bureau! Search for your favorite beers, read reviews, and leave your own. You can add, update, and delete beers from the list. Click on a specific beer to see details about it.
 
 ## Database Schema 
 The database for this application has the following tables and relationships:
-<div><img src="public/img/{image_name}.png" alt="Application Schema Visualization" width = 350 ></div>
+<div><img src="app/assets/images/beer_schema.png" alt="Application Schema Visualization" width = 350 ></div>
 
 ---
 
@@ -52,14 +49,14 @@ The database for this application has the following tables and relationships:
 
 ## Setup/Installation
 
-* To clone this directory, navigate in your terminal to the desired location of the project and run command `git clone https://github.com/joanna-miller/{repository_name}.git`
-* Navigate to top level of the directory with command `cd {repository_name}`
+* To clone this directory, navigate in your terminal to the desired location of the project and run command `git clone https://github.com/joanna-miller/better-beer-bureau.git`
+* Navigate to top level of the directory with command `cd better-beer-bureau`
 * To install bundler for managing gems run command `gem install bundler`
 * To install gems into the project run command `bundle install`
 * Launch PostgreSQL to run a persistent database management server with command `postgres`
-* To recreate database, run command `rake db:setup`
+* To recreate database with default data, run command `rake db:setup`
 * To run tests using rspec, run command `rspec`
-* To run a live server, from the root level of the project directory in your terminal, run command `rails server`
+* To run a live server run command `rails server`
 * To interact with application, navigate to http://localhost:3000/ in a web browser.
 * Exit live server, press Ctrl+C in your terminal
 
@@ -70,12 +67,6 @@ The database for this application has the following tables and relationships:
 * To use Visual Studio Code to edit this project, follow install instructions [here](https://code.visualstudio.com/).
 * To enable command `code`, open VS Code, click on View > Command Palette, type in "shell command", and click on "Shell Command: Install 'code' command in PATH"
 * Now, from your terminal, in the project's top level directory, you can run command `code .` to open project in VS Code.
-
----
-
-## Known Bugs
-
-* {list any known bugs here}
 
 ---
 
