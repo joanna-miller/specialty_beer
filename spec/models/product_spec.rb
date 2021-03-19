@@ -6,5 +6,6 @@ describe Product do
   it { should validate_uniqueness_of(:name).on(:create).case_insensitive }
   it { should validate_presence_of :cost }
   it { should validate_presence_of :country_of_origin }
+  it { should validate_presence_of :brand }
 
 end
