@@ -49,8 +49,8 @@ The database for this application has the following tables and relationships:
 
 ## Setup/Installation
 
-* To clone this directory, navigate in your terminal to the desired location of the project and run command `git clone https://github.com/joanna-miller/better-beer-bureau.git`
-* Navigate to top level of the directory with command `cd better-beer-bureau`
+* To clone this directory, navigate in your terminal to the desired location of the project and run command `git clone https://github.com/joanna-miller/specialty_beer.git`
+* Navigate to top level of the directory with command `cd specialty_beer`
 * To install bundler for managing gems run command `gem install bundler`
 * To install gems into the project run command `bundle install`
 * Launch PostgreSQL to run a persistent database management server with command `postgres`
