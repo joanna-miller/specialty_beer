@@ -26,6 +26,7 @@
 * _Bundler 2.2.11_
 * _Puma 5.2.2_
 * _Launchy 2.5.0_
+* _Faker 2.17.00_
 * _Bootstrap-Sass 3.4.1_
 * _git 2.30.0_
 
@@ -55,8 +56,8 @@ The database for this application has the following tables and relationships:
 * Navigate to top level of the directory with command `cd {repository_name}`
 * To install bundler for managing gems run command `gem install bundler`
 * To install gems into the project run command `bundle install`
-* Launch PostgreSQL to run a persistent database management server `postgres`
-* To recreate database, run command `rake build[{database_name}]`
+* Launch PostgreSQL to run a persistent database management server with command `postgres`
+* To recreate database, run command `rake db:setup`
 * To run tests using rspec, run command `rspec`
 * To run a live server, from the root level of the project directory in your terminal, run command `rails server`
 * To interact with application, navigate to http://localhost:3000/ in a web browser.
