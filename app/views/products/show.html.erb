@@ -1,15 +1,17 @@
 <p><%= link_to "Leave a Review", new_product_review_path(@product) %></p>
 
-<h1><%= @product.name %></h1>
-<h2>Made by: <%= @product.brand %></h2>
-<h3>Price: $<%= @product.cost %></h3>
-<h4>Made In: <%= @product.country_of_origin %></h4>
+<div id="beer-details">
+  <h1><%= @product.name %></h1>
+  <h2>Made by: <%= @product.brand %></h2>
+  <h3>Price: $<%= @product.cost %></h3>
+  <h4>Made In: <%= @product.country_of_origin %></h4>
+</div>
 
 <h3>Reviews for <%= @product.name %></h3>
 <% if @product.reviews.any? %>
   <% @product.reviews.each do |review| %>
     <p>
-      <li><span class="review-header">Written by: <b><%= review.author %></b>, Rating: <%= '*'*review.rating %></span><br><%= review.content_body %></li>
+      <li><span class="review-header">Written by: <b><%= review.author %></b> - Rating <span id="stars"><%= '*'*review.rating %></span></span><br><%= review.content_body %></li>
     </p>
   <% end %>
 <% else %>
