@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "the add a review process" do
   it "adds a new review" do
-    new_beer = Product.new({name: "Fake Beer", brand: "Dogfish Head", cost: "10.99", country_of_origin: "USA"})
+    new_beer = Product.new({name: "Unreal Beer", brand: "Dogfish Head", cost: "10.99", country_of_origin: "USA"})
     new_beer.save
     visit product_path(new_beer)
     click_link 'Leave a Review'
@@ -14,7 +14,7 @@ describe "the add a review process" do
   end
 
   it "gives an error when any field is left blank" do
-    new_beer = Product.new({name: "Fake Beer", brand: "Dogfish Head", cost: "10.99", country_of_origin: "USA"})
+    new_beer = Product.new({name: "Unreal Beer", brand: "Dogfish Head", cost: "10.99", country_of_origin: "USA"})
     new_beer.save
     visit product_path(new_beer)
     click_on 'Leave a Review'
