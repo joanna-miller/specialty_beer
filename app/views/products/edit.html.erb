@@ -2,7 +2,9 @@
 
 <%= render "layouts/product_form" %>
 
-<%= link_to "Delete Beer", product_path(@product), :data => { :confirm => "Are you sure?", :method => "delete" } %></p>
+<p><%= link_to "Delete Beer", product_path(@product), 
+                              :data => { :confirm => "Are you sure?", 
+                              :method => "delete" } %></p>
 
 <p><%= link_to "Back to #{@product.name}", product_path(@product) %></p>
 
