@@ -3,7 +3,7 @@
 <div id="beer-details">
   <h1><%= @product.name %></h1>
   <h2>Made by: <%= @product.brand %></h2>
-  <h3>Price: $<%= @product.cost %></h3>
+  <h3>Price: <%= number_to_currency(@product.cost) %> </h3>
   <h4>Made In: <%= @product.country_of_origin %></h4>
 </div>
 
