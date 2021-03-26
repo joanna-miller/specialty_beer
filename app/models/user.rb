@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   def validate_age
       if birth_date.present? && birth_date > 21.years.ago
-          errors.add('You must be over 21 years old to browse this site.')
+          errors.add(:birth_date, 'You must be over 21 years old to browse this site.')
       end
   end
 end
