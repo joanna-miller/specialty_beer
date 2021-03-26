@@ -1,0 +1,36 @@
+<p><%= link_to "Back To Beer List", products_path %></p>
+
+<div class="beer-search">
+  <%= form_tag reviews_path, method: :get do %>
+    <%= label_tag "Find Reviews by Author" %>
+    <%= text_field_tag :author_search, params[:author_search], class: "form-control", required: true %>
+    <%= submit_tag 'Search by Author', name: nil, class: "btn search-button" %>
+  <% end %>
+</div>
+
+<% if @searched_reviews != nil %>
+  <%= form_tag reviews_path, method: :get do %>
+    <%= submit_tag "See All Reviews", name: :full_list, class: "btn" %>
+  <% end %>
+  <h3>Search Results</h3>
+  <% if @searched_reviews.any? %>  
+    <% @searched_reviews.each do |review| %>
+      <li><span class="review-header">Written by: <b><%= review.author %></b> - Rating <span id="stars"><%= '*'*review.rating %></span><%= link_to " Edit Review", edit_review_path(review) %></span><br><%= review.content_body %></li>
+    <% end %>
+  <% else %>
+    <p>There are currently no matches to your search.</p>
+  <% end %>    
+<% end %>
+
+<% if @reviews != nil %>
+  <% if @reviews.any? %>
+    <% @reviews.each do |review| %>
+      <li><span class="review-header">Written by: <b><%= review.author %></b> - Rating <span id="stars"><%= '*'*review.rating %></span></span><%= link_to " Edit Review", edit_review_path(review) %><br><%= review.content_body %></li>
+    <% end %>
+  <% else %>
+    <p>There are currently no reviews for any products.</p>
+  <% end %>  
+<% end %>
+
+
+    

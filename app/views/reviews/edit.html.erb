@@ -1,8 +1,8 @@
 <%= render "layouts/errors", :object => @review %>
 
-<h2>Write A Review for <%= @product.name %></h2>
+<h1>Edit Review</h1>
 
-<%= form_for [@product, @review] do |f| %>
+<%= form_for @review do |f| %>
   <%= f.label "Name" %>
   <%= f.text_field :author, class: "form-control" %>
   <%= f.label "Review" %>
@@ -12,5 +12,10 @@
   <%= f.submit class: "btn"  %>
 <% end %>
 
-<p><%= link_to "Back to Beer", product_path(@product) %></p>
-<p><%= link_to "Back to Full Beer List", products_path %></p>
+<p><%= link_to "Delete Review", review_path(@review), 
+                              :data => { :confirm => "Are you sure?", 
+                              :method => "delete" } %></p>
+
+<p><%= link_to "Back to Review List", reviews_path %></p>
+
+<p><%= link_to "Back to Home Page", root_path %></p>
