@@ -15,9 +15,19 @@
       <div class="container">
         <h1 class="display-4">Better Beer Bureau</h1>
         <p class="lead">Finding Better Beer</p>
+      <% if current_user %>
+        <div id="nav">
+          <p><%= link_to "Home", root_path %> |
+          <%= link_to "Settings", edit_user_registration_path %> |
+          <%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %> 
+          </p>
+        </div>
+      <% end %>
       </div>
     </div>
+
     <div class="container">
+    
       <%= flash[:alert] %>
       <%= flash[:notice] %>
       <%= yield %>
