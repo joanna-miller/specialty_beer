@@ -1,1 +1,17 @@
-<div id="enter"><%= link_to "e n t e r", products_path, id: "enter-link" %></p>
+<% if current_user %>
+  <div id="enter">
+    <%= link_to "e n t e r", products_path, id: "enter-link" %>
+  </div>
+<% else %>
+  <div id="authenticate">
+    <div id="enter">
+      <%= link_to "sign in", new_user_session_path, id: "enter-link" %>
+    </div>
+
+    <div id="enter">
+      <%= link_to "sign up", new_user_registration_path, id: "enter-link" %>
+    </div>
+  </div>
+<% end %>
+
+
