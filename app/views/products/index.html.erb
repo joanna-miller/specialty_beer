@@ -6,7 +6,7 @@
 <div id="search-forms">
   <div class="beer-search">
     <%= form_tag products_path, method: :get do %>
-      <%= label_tag "Find Beer by Name" %>
+      <%= label_tag "Find beer by name" %>
       <%= text_field_tag :beer_search, params[:beer_search], class: "form-control", required: true %>
       <%= submit_tag 'Search by Beer', name: nil, class: "btn search-button" %>
     <% end %>
@@ -14,7 +14,7 @@
 
   <div class="brand-search">
     <%= form_tag products_path, method: :get do %>
-      <%= label_tag "Find Beer by Brand" %>
+      <%= label_tag "Find beer by brand" %>
       <%= text_field_tag :brand_search, params[:brand_search], class: "form-control", required: true %>
       <%= submit_tag 'Search by Brand', brand: nil, class: "btn search-button" %>
     <% end %>

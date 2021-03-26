@@ -716,14 +716,14 @@
         "lines": [
           1,
           1,
-          4,
-          0,
-          4,
-          0,
+          8,
+          1,
+          7,
+          1,
           null,
-          4,
+          6,
           null,
-          4,
+          8,
           null,
           null,
           1,
@@ -789,12 +789,12 @@
           1,
           null,
           1,
-          4,
-          0,
+          6,
+          1,
           null,
-          4,
+          5,
           null,
-          4,
+          6,
           null,
           null,
           1,
@@ -872,9 +872,9 @@
           null,
           1,
           1,
-          10,
-          9,
-          9,
+          13,
+          12,
+          12,
           null,
           null
         ]
@@ -1006,6 +1006,53 @@
           null
         ]
       },
+      "/Users/joannamiller/Desktop/specialty_beer/spec/features/search_product_pages_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/joannamiller/Desktop/specialty_beer/spec/features/search_review_pages_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/joannamiller/Desktop/specialty_beer/spec/models/product_spec.rb": {
         "lines": [
           1,
@@ -1060,6 +1107,6 @@
         ]
       }
     },
-    "timestamp": 1616779706
+    "timestamp": 1616781075
   }
 }
