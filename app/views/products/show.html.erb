@@ -1,4 +1,4 @@
-<p><%= link_to "Leave a Review", new_product_review_path(@product) %></p>
+<%= link_to "Leave a Review", new_product_review_path(@product) %>
 
 <div id="beer-details">
   <h1><%= @product.name %></h1>
@@ -11,16 +11,24 @@
 <% if @product.reviews.any? %>
   <% @product.reviews.each do |review| %>
     <p>
-      <li><span class="review-header">Written by: <b><%= review.author %></b> - Rating <span id="stars"><%= '*'*review.rating %></span></span><%= link_to " Edit Review", edit_review_path(review) %><br><%= review.content_body %></li>
+      <li><span class="review-header">Written by: <b><%= review.author %></b> - Rating <span id="stars"><%= '*'*review.rating %></span></span>
+      <% if current_user && current_user.admin %>
+        <%= link_to " Edit Review", edit_review_path(review) %>
+      <% end %>
+      <br><%= review.content_body %></li>
     </p>
   <% end %>
 <% else %>
   <p>No reviews have been written for this product yet. Click link below to add one!</p>
 <% end %>
 
-<p><%= link_to "Edit Beer", edit_product_path(@product) %></p>
+<% if current_user && current_user.admin %>
+  <p><%= link_to "Edit Beer", edit_product_path(@product) %></p>
+<% end %>
 
 <p><%= link_to "Back to Full Beer List", products_path %></p>
 
 <p><%= link_to "Back to Home Page", root_path %></p>
+
+<p><%= link_to "Sign Out", destroy_user_session_path, method: "delete" %></p>
 

@@ -1,4 +1,8 @@
 class ProductsController < ApplicationController
+  before_action :except => [:index, :show] do
+    redirect_to new_user_session_path unless current_user && current_user.admin
+  end
+
   def index
     if params[:beer_search]
       @searched_product = Product.where('lower(name) LIKE ?', "%#{params[:beer_search].downcase}%")
