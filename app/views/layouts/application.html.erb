@@ -21,6 +21,7 @@
           <% if current_user && current_user.admin %>
           <%= link_to "Beer List", products_path %> |
           <%= link_to "Review List", reviews_path %> |
+          <%= link_to "User List", users_path %> |
           <% end %>
           <%= link_to "Settings", edit_user_registration_path %> |
           <%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %>
