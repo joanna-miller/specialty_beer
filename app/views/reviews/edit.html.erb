@@ -3,7 +3,7 @@
 <h1>Edit Review</h1>
 
 <%= form_for @review do |f| %>
-  <%= f.label "Name" %>
+  <%= f.label :author %>
   <%= f.text_field :author, class: "form-control" %>
   <%= f.label "Review" %>
   <%= f.text_area :content_body, class: "form-control", :rows=>10, :cols=>60 %>
