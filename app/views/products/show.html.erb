@@ -1,3 +1,7 @@
+<% if current_user && current_user.admin %>
+  <p><%= link_to "Edit Beer", edit_product_path(@product) %></p>
+<% end %>
+
 <%= link_to "Leave a Review", new_product_review_path(@product) %>
 
 <div id="beer-details">
@@ -20,10 +24,6 @@
   <% end %>
 <% else %>
   <p>No reviews have been written for this product yet. Click link below to add one!</p>
-<% end %>
-
-<% if current_user && current_user.admin %>
-  <p><%= link_to "Edit Beer", edit_product_path(@product) %></p>
 <% end %>
 
 <p><%= link_to "Back to Full Beer List", products_path %></p>

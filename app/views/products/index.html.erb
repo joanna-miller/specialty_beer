@@ -2,6 +2,7 @@
 
 <% if current_user && current_user.admin %>
   <p><%= link_to "Add a New Beer", new_product_path %></p>
+  <p><%= link_to "View All Reviews", reviews_path %></p>
 <% end %>
 
 <div id="search-forms">
