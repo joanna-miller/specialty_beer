@@ -1,0 +1,9 @@
+<h1>Change Admin Status of <%= @user.email %></h1>
+
+<%= form_for @user do |f| %>
+  <%= f.radio_button(:admin, "true") %>
+  <%= f.label ("Make Admin") %><br>
+  <%= f.radio_button(:admin, "false") %>
+  <%= f.label ("Remove Admin Status") %><br>
+  <%= f.submit class: 'btn' %>
+<% end %>

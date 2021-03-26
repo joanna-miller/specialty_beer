@@ -1,0 +1,7 @@
+<% if @users.any? %>
+  <% @users.each do |user| %>
+    <li class="lead">User Email: <%= user.email %><br>Admin Status: <%= user.admin %><br><%= link_to " Change Admin Status", user_path(user) %></li>
+  <% end %>
+<% else %>
+  <p>There are currently no users in the system.</p>
+<% end %>  
