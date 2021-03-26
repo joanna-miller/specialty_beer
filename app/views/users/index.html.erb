@@ -1,7 +1,31 @@
-<% if @users.any? %>
-  <% @users.each do |user| %>
-    <li class="lead">User Email: <%= user.email %><br>Admin Status: <%= user.admin %><br><%= link_to " Change Admin Status", user_path(user) %></li>
+<div class="beer-search">
+  <%= form_tag users_path, method: :get do %>
+    <%= label_tag "Find user by email" %>
+    <%= text_field_tag :user_search, params[:user_search], class: "form-control", required: true %>
+    <%= submit_tag 'Search by email', name: nil, class: "btn search-button" %>
   <% end %>
-<% else %>
-  <p>There are currently no users in the system.</p>
-<% end %>  
+</div>
+
+<% if @searched_user != nil %>
+  <%= form_tag users_path, method: :get do %>
+    <%= submit_tag "See All Users", name: :full_list, class: "btn" %>
+  <% end %>
+  <h3>Search Results</h3>
+  <% if @searched_user.any? %>  
+    <% @searched_user.each do |user| %>
+      <li class="lead">User Email: <%= user.email %><br>Admin Status: <%= user.admin %><br><%= link_to " Change Admin Status", user_path(user) %></li>
+    <% end %>
+  <% else %>
+    <p>There are currently no matches to your search.</p>
+  <% end %>    
+<% end %>
+
+<% if @users != nil %>
+  <% if @users.any? %>
+    <% @users.each do |user| %>
+      <li class="lead">User Email: <%= user.email %><br>Admin Status: <%= user.admin %><br><%= link_to " Change Admin Status", user_path(user) %></li>
+    <% end %>
+  <% else %>
+    <p>There are currently no users in the system.</p>
+  <% end %>  
+<% end %>

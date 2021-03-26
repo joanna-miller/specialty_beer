@@ -4,7 +4,11 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
+    if params[:user_search]
+      @searched_user = User.where('lower(email) LIKE ?', "%#{params[:user_search].downcase}%")
+    else
+      @users = User.all
+    end
     render :index
   end
 
