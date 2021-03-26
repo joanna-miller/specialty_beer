@@ -8,6 +8,8 @@ describe "the search a review process" do
     review.save
     review2 = Review.new({author: "Other Reviewer", content_body: "Sequi sed eum. Illo occaecati omnis. Repellendus accusantium enim." , rating: 5, product_id: new_beer.id })
     review2.save
+    user = User.create(email: 'test@test.com', password: "password", password_confirmation: "password", birth_date: "1990/06/18", admin: true)
+    sign_in user
     visit reviews_path
     fill_in 'author_search', :with => 'Jo Miller'
     click_on 'Search by Author'

@@ -27,6 +27,8 @@
           1,
           1,
           1,
+          1,
+          1,
           null,
           null
         ]
@@ -690,6 +692,17 @@
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          11,
+          0,
+          null,
+          null,
           null
         ]
       },
@@ -703,6 +716,14 @@
       "/Users/joannamiller/Desktop/specialty_beer/app/controllers/application_controller.rb": {
         "lines": [
           1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
           null
         ]
       },
@@ -715,6 +736,10 @@
       "/Users/joannamiller/Desktop/specialty_beer/app/controllers/products_controller.rb": {
         "lines": [
           1,
+          1,
+          8,
+          null,
+          null,
           1,
           8,
           1,
@@ -776,6 +801,7 @@
       "/Users/joannamiller/Desktop/specialty_beer/app/controllers/home_controller.rb": {
         "lines": [
           1,
+          1,
           null,
           1,
           1,
@@ -787,6 +813,9 @@
       "/Users/joannamiller/Desktop/specialty_beer/app/controllers/reviews_controller.rb": {
         "lines": [
           1,
+          1,
+          10,
+          null,
           null,
           1,
           6,
@@ -921,8 +950,12 @@
           1,
           1,
           1,
+          1,
+          1,
           null,
           null,
+          1,
+          1,
           1,
           1,
           1,
@@ -940,6 +973,8 @@
         "lines": [
           1,
           null,
+          1,
+          1,
           1,
           1,
           1,
@@ -966,6 +1001,8 @@
           1,
           1,
           1,
+          1,
+          1,
           null,
           null
         ]
@@ -974,6 +1011,8 @@
         "lines": [
           1,
           null,
+          1,
+          1,
           1,
           1,
           1,
@@ -1002,6 +1041,8 @@
           1,
           1,
           1,
+          1,
+          1,
           null,
           null
         ]
@@ -1019,8 +1060,12 @@
           1,
           1,
           1,
+          1,
+          1,
           null,
           null,
+          1,
+          1,
           1,
           1,
           1,
@@ -1037,6 +1082,8 @@
         "lines": [
           1,
           null,
+          1,
+          1,
           1,
           1,
           1,
@@ -1107,6 +1154,6 @@
         ]
       }
     },
-    "timestamp": 1616781075
+    "timestamp": 1616784897
   }
 }

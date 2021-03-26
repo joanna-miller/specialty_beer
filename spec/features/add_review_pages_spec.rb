@@ -4,6 +4,8 @@ describe "the add a review process" do
   it "adds a new review" do
     new_beer = Product.new({name: "Unreal Beer", brand: "Dogfish Head", cost: "10.99", country_of_origin: "USA"})
     new_beer.save
+    user = User.create(email: 'test@test.com', password: "password", password_confirmation: "password", birth_date: "1990/06/18")
+    sign_in user
     visit product_path(new_beer)
     click_link 'Leave a Review'
     fill_in 'review_author', :with => 'Jo Miller'
@@ -16,6 +18,8 @@ describe "the add a review process" do
   it "gives an error when any field is left blank" do
     new_beer = Product.new({name: "Unreal Beer", brand: "Dogfish Head", cost: "10.99", country_of_origin: "USA"})
     new_beer.save
+    user = User.create(email: 'test@test.com', password: "password", password_confirmation: "password", birth_date: "1990/06/18")
+    sign_in user
     visit product_path(new_beer)
     click_on 'Leave a Review'
     click_on 'Create Review'

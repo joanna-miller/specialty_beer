@@ -5,6 +5,8 @@ describe "the search a product process" do
     new_beer = Product.new({name: "Unreal Beer", brand: "Dogfish Head", cost: "10.99", country_of_origin: "USA"})
     new_beer.save
     new_beer2 = Product.new({name: "Fake Beer", brand: "Sam Adams", cost: "10.99", country_of_origin: "USA"})
+    user = User.create(email: 'test@test.com', password: "password", password_confirmation: "password", birth_date: "1990/06/18")
+    sign_in user
     visit products_path
     fill_in 'beer_search', :with => 'Fake Beer'
     click_on 'Search by Beer'
@@ -15,6 +17,8 @@ describe "the search a product process" do
     new_beer = Product.new({name: "Unreal Beer", brand: "Dogfish Head", cost: "10.99", country_of_origin: "USA"})
     new_beer.save
     new_beer2 = Product.new({name: "Fake Beer", brand: "Sam Adams", cost: "10.99", country_of_origin: "USA"})
+    user = User.create(email: 'test@test.com', password: "password", password_confirmation: "password", birth_date: "1990/06/18")
+    sign_in user
     visit products_path
     fill_in 'brand_search', :with => 'Sam Adams'
     click_on 'Search by Brand'
