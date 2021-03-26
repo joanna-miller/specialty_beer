@@ -35,6 +35,12 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @reviews = @product.reviews
+    if params[:high_rating]
+      @reviews = @product.reviews.order("rating DESC")
+    elsif params[:low_rating]
+      @reviews = @product.reviews.order("rating ASC")
+    end
     @review = Review.new
     render :show
   end

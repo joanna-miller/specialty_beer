@@ -96,6 +96,11 @@ body {
   color: #aa5400;
 }
 
+.sort-buttons {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
 a {
   color: #eeeeee;
   font-size: 18px;

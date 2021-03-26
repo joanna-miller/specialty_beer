@@ -12,8 +12,19 @@
 </div>
 
 <h3>Reviews for <%= @product.name %></h3>
-<% if @product.reviews.any? %>
-  <% @product.reviews.each do |review| %>
+
+<div class="sort-buttons">
+  <%= form_tag product_path, method: :get do %>
+    <%= submit_tag "Sort by Highest Rating", name: :high_rating, class: "btn" %>
+  <% end %>
+
+  <%= form_tag product_path, method: :get do %>
+    <%= submit_tag "Sort by Lowest Rating", name: :low_rating, class: "btn" %>
+  <% end %>
+</div>
+
+<% if @reviews.any? %>
+  <% @reviews.each do |review| %>
     <p>
       <li><span class="review-header">Written by: <b><%= review.author %></b> - Rating <span id="stars"><%= '*'*review.rating %></span></span>
       <% if current_user && current_user.admin %>
