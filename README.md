@@ -26,6 +26,7 @@
 * _Faker 2.17.00_
 * _Bootstrap-Sass 3.4.1_
 * _git 2.30.0_
+* _npm_
 
 ---
 
@@ -44,6 +45,7 @@ The database for this application has the following tables and relationships:
 * You will need to use your system's **terminal emulator** to setup and locally use this application.
 * You must have **Ruby 2.6.5** installed to be able to launch this application ([how to install Ruby 2.6.5](https://www.learnhowtoprogram.com/ruby-and-rails/getting-started-with-ruby/installing-ruby)).
 * **PostgreSQL** is required to manage this application's database. You can [follow this link](https://www.enterprisedb.com/downloads/postgresql) to install it.
+* **Yarn** is required to utilize the live server with Rails 6.1.3. To install Yarn you will need npm, which you can install [here](https://www.npmjs.com/get-npm). You can [follow this link](https://classic.yarnpkg.com/en/docs/install/#mac-stable) to install Yarn.
 
 ---
 
@@ -53,6 +55,7 @@ The database for this application has the following tables and relationships:
 * Navigate to top level of the directory with command `cd specialty_beer`
 * To install bundler for managing gems run command `gem install bundler`
 * To install gems into the project run command `bundle install`
+* To install dependencies with npm, run command `npm install`
 * Launch PostgreSQL to run a persistent database management server with command `postgres`
 * To recreate database with default data, run command `rake db:setup`
 * To run tests using rspec, run command `rspec`
